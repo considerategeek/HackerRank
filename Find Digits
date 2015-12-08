@@ -1,0 +1,16 @@
+a = 0
+x = int(raw_input())
+for i in range(x):
+    num = (raw_input())
+
+    for j in range(len(num)):
+
+        if int(num[j])!=0:
+
+          if int((num)) % int((num[j])) == 0 :
+             a += 1
+          else:
+             continue
+
+    print a
+    a=0
