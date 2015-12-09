@@ -1,0 +1,17 @@
+a=True
+y=raw_input()
+l='abcdefghijklmnopqrstuvwxyz'
+m='ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+for i in range(len(l)):
+
+    if y.find(l[i])>=0 or y.find(m[i])>=0:
+          a=True
+    else:
+          a=False
+          break
+
+
+if a==True:
+    print 'pangram'
+else:
+    print 'not pangram'
