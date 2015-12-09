@@ -1,0 +1,19 @@
+l=[]
+bool=True
+x=int(raw_input())
+for i in range(x):
+    a=raw_input()
+    l.extend(a)
+    l.reverse()
+    b=''.join(l)
+    for i in range(len(a)-1):
+        if abs(ord(a[i+1])-ord(a[i]))==abs(ord(b[i+1])-ord(b[i])):
+            bool=True
+
+        else:
+            bool=False
+            break
+    if bool==True:
+        print 'Funny'
+    else:
+        print 'Not Funny'
