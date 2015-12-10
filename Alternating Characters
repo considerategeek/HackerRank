@@ -1,0 +1,14 @@
+count=0
+x=int(raw_input())
+for i in range(x):
+    str=raw_input()
+    for j in range(len(str)-1):
+
+         a=str[j]
+         if a==str[j+1]:
+             count+=1
+         else:
+             continue
+
+    print count
+    count=0
