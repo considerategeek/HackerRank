@@ -1,0 +1,13 @@
+l=[]
+test='abcdefghijklmnopqrstuvwxyz'
+l.extend(test)
+x=int(raw_input())
+for i in range(x):
+    str=raw_input()
+    for i in test:
+        if str.count(i)==0:
+            l.remove(i)
+        else:
+            continue
+    test=''.join(l)
+print len(l)
