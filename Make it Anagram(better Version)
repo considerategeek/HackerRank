@@ -1,0 +1,6 @@
+one=raw_input()
+two=raw_input()
+c=0
+for i in range(97,123):
+    c+=abs(one.count(chr(i))-two.count(chr(i)))
+print c
