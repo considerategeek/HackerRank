@@ -1,0 +1,16 @@
+marks,scores,result=[],[],[]
+min=[]
+x=int(raw_input())
+for i in range(x):
+    marks.append([raw_input(),float(raw_input())])
+    scores.append(marks[i][1])
+scores.sort()
+for i in scores:
+    if scores[0]!=i:
+        min.append(i)
+        break
+for i in range(x):
+    if min[0]==marks[i][1]:
+        result.append(marks[i][0])
+result.sort()
+print '\n'.join(result)
