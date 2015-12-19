@@ -1,0 +1,5 @@
+lst = raw_input().split(' ')
+b=[]
+for i in lst:
+    b.append(i.capitalize())
+print ' '.join(b)
