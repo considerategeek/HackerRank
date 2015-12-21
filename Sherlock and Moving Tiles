@@ -1,0 +1,9 @@
+import math
+l=map(float,((raw_input()).split()))
+x=int(raw_input())
+for i in range(x):
+    l1=math.sqrt(int(raw_input()))
+    d2=(math.sqrt(2.0)*l[2]*(l1-l[0]))/(l[1]-l[2])
+    print round(abs(d2/l[2]),4)
+
+
