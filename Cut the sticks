@@ -1,0 +1,13 @@
+a=[]
+n = int(raw_input().strip())
+arr = map(int,raw_input().strip().split())
+while len(arr)!=1:
+    mini=min(arr)
+    for i in range(len(arr)):
+        arr[i]=arr[i]-mini
+        if arr[i]>0:
+           a.append(arr[i])
+    print len(arr)
+    arr=a
+    a=[]
+print len(arr)
