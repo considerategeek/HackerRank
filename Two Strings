@@ -1,0 +1,14 @@
+bool=True
+x=int(raw_input())
+for i in range(x):
+    a,b=raw_input(),raw_input()
+    for i in range(97,123):
+        if a.count(chr(i))>0 and b.count(chr(i))>0:
+            print 'YES'
+            bool=True
+            break
+        else:
+            bool=False
+            continue
+    if bool==False:
+        print 'NO'
