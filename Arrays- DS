@@ -1,0 +1,4 @@
+n = int(raw_input().strip())
+arr =raw_input().split(' ')
+arr.reverse()
+print ' '.join(arr)
