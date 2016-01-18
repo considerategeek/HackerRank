@@ -1,0 +1,7 @@
+n1=int(raw_input())
+x=set(map(int,raw_input().split()))
+n2=int(raw_input())
+y=set(map(int,raw_input().split()))
+c=x.symmetric_difference(y)
+for i in sorted(list(c)):
+    print i
