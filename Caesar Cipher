@@ -1,0 +1,19 @@
+x=int(raw_input())
+str=list(raw_input())
+key=int(raw_input())
+key=key%26
+new=[]
+for i in str:
+    if (ord(i)>96 and ord(i)<123):
+        s=ord(i)+key
+        if s>122:
+            s=(s%122)+96
+        new.append(chr(s))
+    elif (ord(i)>=65 and ord(i)<=90):
+        s=ord(i)+key
+        if s>90:
+            s=(s%90)+64
+        new.append(chr(s))
+    else:
+        new.append(i)
+print ''.join(new)
