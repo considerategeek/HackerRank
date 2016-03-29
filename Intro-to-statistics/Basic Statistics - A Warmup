@@ -1,0 +1,19 @@
+import math
+N=int(raw_input())
+list=map(int,raw_input().split())
+list.sort()
+sum=0.0
+for i in list:
+    sum+=i
+median=round((sum/N),1)
+print median
+if N//2==0:
+    print (list[(N-1)/2])
+    print "ram",N
+else:
+    print round((list[N/2]+list[(N/2)-1])/2.0,1)
+print list[0]
+s=0
+for i in range(N):
+    s=s+((list[i]-median)**2)
+print round(math.sqrt(s/N),1)
