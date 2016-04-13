@@ -1,0 +1,5 @@
+total=int(raw_input())
+list=map(int,raw_input().split())
+for i in range(total):
+    if list.count(list[i])==1:
+        print list[i]
