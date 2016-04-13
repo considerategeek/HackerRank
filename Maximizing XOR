@@ -1,0 +1,7 @@
+up=l=int(raw_input())
+down=int(raw_input())
+l=[]
+for i in range(up,down+1):
+    for j in range(up,down+1):
+        l.append(i^j)
+print max(l)
