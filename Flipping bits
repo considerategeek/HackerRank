@@ -1,0 +1,20 @@
+l=[]
+for i in range(int(raw_input())):
+    binary=bin(int(raw_input()))
+    length=len(binary[2:])
+    for i in range(32-length):
+        l.append(0)
+    l.extend(binary[2:])
+    l=map(int,l)
+    for i in range(32):
+        if l[i]==0:
+            l[i]=1
+        else:
+            l[i]=0
+    l=map(str,l)
+    num="".join(l)
+    num=str(num)
+    num=int(num,2)
+    print num
+    l=[]
+
