@@ -1,0 +1,10 @@
+for i in range(int(raw_input())):
+    amount=int(raw_input())
+    length=int(raw_input())
+    cost=map(int,raw_input().split())
+    for i in range(length-1):
+        for j in range(i+1,length):
+            if amount==cost[i]+cost[j]:
+                print i+1,j+1
+            else:
+                continue
