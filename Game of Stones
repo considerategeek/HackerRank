@@ -1,0 +1,6 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+for i in range(int(raw_input())):
+    if int(raw_input())%7 >1:
+        print "First"
+    else:
+        print "Second"
