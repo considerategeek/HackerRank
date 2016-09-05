@@ -1,0 +1,14 @@
+inp=map(int,raw_input().split())
+space_station=map(int,raw_input().split())
+space_station.sort()
+ls=[]
+lf=[]
+if inp[0] == inp[1]:
+    print 0
+else:
+    for i in range(inp[0]):
+        for j in range(len(space_station)):
+            ls.append(abs(space_station[j]-i))
+        lf.append(min(ls))
+        ls=[]
+    print max(lf)
