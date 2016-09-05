@@ -1,0 +1,12 @@
+num=int(raw_input())
+A=map(int,raw_input().split())
+count = 0
+if sum(A)%2==1:
+    print "NO"
+else:
+    for i in range(num-1):
+        if A[i]%2 !=0:
+            A[i]+=1
+            A[i+1]+=1
+            count+=2
+print count
