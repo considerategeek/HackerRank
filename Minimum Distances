@@ -1,0 +1,16 @@
+n=int(raw_input())
+A=map(int,raw_input().split())
+d={}
+min_diff=n+1
+for i in range(len(A)):
+    try:
+        min_diff=min(i-d[A[i]],min_diff)
+        d[A[i]]=i
+        if min_diff==1:
+            break
+    except:
+        d[A[i]]=i
+if min_diff==n+1:
+    print -1
+else:
+    print min_diff
