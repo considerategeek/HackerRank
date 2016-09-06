@@ -1,0 +1,7 @@
+inp=map(int,raw_input().strip().split())
+arr=map(int,raw_input().split())
+inp[1]=inp[1]%inp[0]
+for i in range(inp[2]):
+    query=int(raw_input())
+    fi=query-inp[1]
+    print arr[fi]
