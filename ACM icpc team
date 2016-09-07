@@ -1,0 +1,11 @@
+n,m=map(int,raw_input().split())
+l=[]
+al=[]
+for i in range(n):
+    l.append(int(raw_input(),2))
+print l
+for j in range(n-1):
+    for k in range(j+1,n):
+        al.append(bin(l[j]|l[k]).count('1'))
+print max(al)
+print al.count(max(al))
