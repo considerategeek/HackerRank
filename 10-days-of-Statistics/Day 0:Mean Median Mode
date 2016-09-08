@@ -1,0 +1,32 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+n=int(raw_input())
+arr=map(int,raw_input().split())
+
+#MEAN
+
+mean=sum(arr)/float(n)
+print mean
+
+#MEDIAN
+
+arr.sort()
+if n%2==0:
+    median=(arr[n/2]+arr[(n/2)-1])/2.0
+else:
+    median=arr[(n-1)/2]
+print median
+
+#MODE
+
+d={}
+for  i in range(n):
+    d[arr[i]]=arr.count(arr[i])
+max=0
+maxe=arr[0]
+for i in range(n-1):
+    if d.get(arr[i])>max:
+        max=d.get(arr[i])
+        maxe=arr[i]
+    elif d.get(arr[i])==max:
+        continue
+print maxe
