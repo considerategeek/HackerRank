@@ -1,0 +1,9 @@
+n=int(raw_input())
+arr=map(int,raw_input().split())
+wt=map(int,raw_input().split())
+sum_arr=0
+for i in range(n):
+    sum_arr+=(arr[i]*wt[i])
+
+sum_arr*=1.0
+print round((sum_arr/sum(wt)),1)
