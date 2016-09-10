@@ -1,0 +1,16 @@
+n=int(raw_input())
+arr=map(int,raw_input().split())
+freq=map(int,raw_input().split())
+arr_new=[]
+for i in range(n):
+    for j in range(freq[i]):
+        arr_new.append(arr[i])
+arr_new.sort()
+nl=len(arr_new)
+def Quartiles(arr,n):
+    if n % 2 == 0:
+        quartiles = (arr[n / 2] + arr[(n / 2) - 1]) / 2.0
+    else:
+        quartiles = arr[(n - 1) / 2]
+    return quartiles
+print round(Quartiles(arr_new[int(round(nl/2.0)):],len(arr_new[int(round(nl/2.0)):])) - Quartiles(arr_new[:nl/2],len(arr_new[:nl/2])),1)
