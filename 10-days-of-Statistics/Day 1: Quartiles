@@ -1,0 +1,12 @@
+def Quartiles(arr,n):
+    if n % 2 == 0:
+        quartiles = (arr[n / 2] + arr[(n / 2) - 1]) / 2
+    else:
+        quartiles = arr[(n - 1) / 2]
+    return quartiles
+len_arr=int(raw_input())
+arr=map(int,raw_input().split())
+arr.sort()
+print Quartiles(arr[:len_arr/2],len(arr[:len_arr/2]))
+print Quartiles(arr,len_arr)
+print Quartiles(arr[int(round(len_arr/2.0)):],len(arr[int(round(len_arr/2.0)):]))
