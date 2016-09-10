@@ -1,0 +1,48 @@
+###PYTHON CODE ####################################################
+
+import math
+n=int(raw_input())
+arr=map(int,raw_input().split())
+sum0=0.0
+for i in range(n):
+    sum0+=arr[i]
+mean=sum0/n
+sum1=0.0
+for i in range(n):
+    sum1+=(mean-arr[i])**2
+result=math.sqrt(sum1/n)
+print round(result,1)
+
+###################################################################
+// C++ CODE
+
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+#include <string>
+#include <iomanip>
+using namespace std;
+
+int main(){
+    int n;
+    float mean,result;
+    cin >> n;
+    vector<int> arr(n);
+    for (int i = 0;i<n ;i++)
+        cin >> arr[i];
+    float sum0=0.0,sum1=0.0;
+    for (int j=0 ;j<n ;j++)
+    {
+        sum0+=arr[j];
+    }
+    mean=sum0/n;
+    for (int k=0 ; k<n;k++)
+    {
+        sum1+=(mean-arr[k])*(mean-arr[k]);
+    }
+    result=sqrt(sum1/n);
+    cout << setprecision(3) << result ;
+    return 0;
+}
