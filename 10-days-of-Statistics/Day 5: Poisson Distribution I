@@ -1,0 +1,14 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+import math
+lamb=float(raw_input())
+k=int(raw_input())
+e=2.71828
+def pnc(n):
+    up=1
+    for i in range(n):
+        up=up*(n-i)
+    return up
+result=(pow(lamb,k)*pow(e,(-lamb)))/pnc(k)
+#print pnc(k)
+print round(result,3)
+
