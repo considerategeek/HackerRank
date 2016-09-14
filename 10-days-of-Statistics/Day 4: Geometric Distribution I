@@ -1,0 +1,6 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+a,b=map(float,raw_input().split())
+n=int(raw_input())
+p=a/b
+q=1-p
+print round(q**(n-1)*p,3)
