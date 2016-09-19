@@ -1,0 +1,17 @@
+s=list(raw_input())
+c=s.count('a')
+cou=0
+for i in range(98,122):
+    if s.count(chr(i))==0:
+        continue
+    if c==s.count(chr(i)):
+        c=s.count(chr(i))
+        continue
+    elif abs(c-s.count(chr(i)))>=1:
+        cou+=1
+    else:
+        continue
+if cou>1:
+        print "NO"
+else:
+        print 'YES'
